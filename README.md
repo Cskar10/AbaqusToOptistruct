@@ -49,7 +49,3 @@ This approach significantly reduces processing time for models with many beam el
 ## Author
 
 Christos Skarakis
-
-## License
-
-See repository for license information.
