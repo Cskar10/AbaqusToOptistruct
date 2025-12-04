@@ -44,8 +44,8 @@ proc ::abaqusToOptistruct::beam::fixAllBeamOffsets {} {
         return 0
     }
     
-    hm_usermessage "Analyzing $totalCount beam elements..."
-    puts "Analyzing $totalCount beam elements..."
+    hm_usermessage "Analysing $totalCount beam elements..."
+    puts "Analysing $totalCount beam elements..."
     
     # Dictionary to group elements by their rounded offset key
     # Key format: "offA1,offA2,offA3,offB1,offB2,offB3"
@@ -61,7 +61,7 @@ proc ::abaqusToOptistruct::beam::fixAllBeamOffsets {} {
         # Update progress every 5%
         set percent [expr {($processed * 100) / $totalCount}]
         if {$percent != $lastPercent && $percent % 5 == 0} {
-            hm_usermessage "Analyzing beam offsets: $percent% ($processed/$totalCount)"
+            hm_usermessage "Analysing beam offsets: $percent% ($processed/$totalCount)"
             set lastPercent $percent
         }
         
@@ -102,7 +102,7 @@ proc ::abaqusToOptistruct::beam::fixAllBeamOffsets {} {
             
         } err]} {
             if {$debug} {
-                puts "Error analyzing element $elemId: $err"
+                puts "Error analysing element $elemId: $err"
             }
         }
     }
